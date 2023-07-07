@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
-   <header class="header">
-        <div class="flex">       
-            <a href="#" class="logo"><img src="images/logo.png" alt=""></a> 
-            <nav class="navbar">   
-                <a href="#home">home</a>                             
-                <a href="#about">about</a>  
-                <a href="#menu">menu</a>
-                <a href="#gallery">gallery</a>
-                <a href="#team">team</a>
-                <a href="#contact">contact</a>
-            </nav>
-        </div>    
-   </header> 
+    <header>
+        <a href="#" class="logo"><img src="images/logo.png" alt=""></a> 
+        <nav class="flex">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul>
+                <a href="#home"><li>home</li></a>
+                <a href="#about"><li>about</li></a>
+                <a href="#menu"><li>menu</li></a>
+                <a href="#gallery"><li>gallery</li></a>
+                <a href="#team"><li>team</li></a>
+                <a href="#contact"><li>contact</li></a>
+            </ul>
+        </nav>
+    </header>              
    <main>
     <div class="home-bg">
         <section class="home" id="home">
             <div class="content">
                 <h3>Coffee Heaven</h3>
-                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <p>A simple jumbotron-style component for calling<br> extra attention to featured content or information.</p>
                 <a href="#about" class="button">About Us</a>
             </div>
         </section>
@@ -166,7 +170,7 @@
         </div>
        </section>
        <footer>
-        <div class="container">
+        <div class="box-container">  
             <div class="box">
                 <i class="fas fa-envelope"></i>
                 <h3>Our Email</h3>

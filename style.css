@@ -10,76 +10,59 @@
     font-family: 'Merienda One', sans-serif;
 }
 html{
-    scroll-padding-top: 2rem;
+    scroll-padding-top: 4rem;
     scroll-behavior: smooth;
 }
 *::selection{
     background-color: #be9c79;
-    color: white;
+    color:white;
 }
 section{
     padding: 3rem 2rem;
     max-width: 100%;
     margin: 0 auto;
 }
-.header{
+header {
     position: sticky;
     top: 0;
-    left: 0;right: 0;
-    z-index: 1;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-family: 'Merienda One', sans-serif;
     background-color: #ede8e3;
 }
-.flex{
-    display: flex;    
-    padding: 0.5rem 2rem;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
 .logo img{
-    height: 3.5rem;
+    width: auto;
+    height: 3rem;
+    float: left;
+    margin: 0.4% 0 0 5%;
 }
-.navbar a{
-    margin: 0.1rem;
+.flex {
+    width: 60%;
+    float: right;
+}
+.flex ul {
+    display: flex;
+    text-align: center;
+    position: relative;   
+}
+.flex ul a {
+    display: block;
     font-size: 25px;
-    font-family: 'nunito', cursive;
     color:#545051;
     cursor: pointer;
     text-decoration: none;
     margin: 0 auto;  
-    padding: 0 10px;
+    padding: 0 auto;
 }
-header .flex .navbar a:hover{
-  background-color: black;
-  color:white;
-} 
-.home-bg{
-    background: linear-gradient(90deg, white, transparent 50%), url(images/home-bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+.flex ul a:hover {
+    color: #fff;
 }
-.home-bg .home{
-    height: 100vh;
-    width: 40%;
-    display: flex;
-    align-items: center;
-    margin-left: 0;
+#menuToggle {
+    display: none;
 }
-.home-bg .home .content{
-    text-align: center;
-}
-.home-bg .home .content h3{
-    font-size: 3rem;
-    color: black;
-    font-family:'Merienda One', cursive;   
-}
-.home-bg .home .content p{
-    padding: 1rem 0;
-    font-family: 'nunito', cursive;
-    font-size: 1rem;
-    color: black;
-    line-height: 2;
-    margin-right: 3%;
+.menu-icon {
+    display: none;
 }
 .button{
     display: inline-block;
@@ -94,6 +77,32 @@ header .flex .navbar a:hover{
 .button:hover{
     background-color: #808080;
 }
+.home-bg{
+    background: linear-gradient(90deg, white, transparent 50%), url(images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home-bg .home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
+}
+.home-bg .home .content{
+    text-align: center;
+}
+.home-bg .home .content h3{
+    font-size: 3rem;
+    color: #333;
+    font-family:'Merienda One', cursive;   
+}
+.home-bg .home .content p{
+    padding: 1.5rem 0;
+    font-family: 'nunito', cursive;
+    font-size: 1.2rem;
+    color: #0f0f0f;
+    line-height: 2;
+}
 .about{
     display: grid;
     grid-template-columns: auto auto;
@@ -103,32 +112,38 @@ header .flex .navbar a:hover{
 }
 .about .image img{
     width: 30rem;
-    height: 30rem ;    
+    height: 30rem ;
 }
 .about .content h3{
-    font-size: 2.5rem;
-   color:black;
-   font-family: 'nunito', cursive; 
+   font-size: 2.5rem;
+   color:-black;
+   font-family: 'Merienda One', cursive;
 }
 .about .content p{
     font-size: 1rem;
-    color:black;
+    color:#0e0e0e;
     font-family: 'Lobster', cursive;
     line-height: 2;
-    padding: 1rem 0;   
+    padding: 1rem 0;
 }
 .facility{
-    height: 30rem;
+    height: 85vh; 
+}
+.facility .container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2.5rem;
+    margin-left: 2.5rem;
 }
 .heading{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 .heading img{
-    height: 3rem;   
+    height: 3rem;
 }
 .heading h3{
-    color: black;
+    color: #333;
     font-size: 2rem;
     font-family:'Merienda One', cursive;;
     align-items: center;
@@ -147,14 +162,9 @@ header .flex .navbar a:hover{
     line-height: 1.5rem;
     color: black ;
     font-size: 1rem;
-    font-family: 'Lobster', cursive;    
+    font-family: 'Lobster', cursive;
 }
-.facility .container{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 2.5rem;
-    margin-left: 2.5rem;   
-}
+
 .menu .container{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -162,64 +172,69 @@ header .flex .navbar a:hover{
     justify-content: center;
 }
 .menu .container .box{
-    text-align: center; 
+    text-align: center;
 }
 .menu .container .box img{
-    width: 90%;
+    width: 100%;
     margin-bottom: 1rem;
 }
 .menu .container .box h3{
+    color: black;
     font-size: 1.5rem;
     font-family: sans-serif;
 }
 .gallery .container{
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: .5rem;
+    gap: 2rem;
     justify-content: center;
 }
 .gallery .container img{
     height: 90%;
-    width: 90%;
+    width: 100%;
+    object-fit: cover;
+    margin-left: 1.5%;
 }
-.team .container{
+.team .container{ 
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 2.5rem;
+    gap: 2rem;
     justify-content: center;
 }
 .team .container .box{
-    text-align: center; 
+    text-align: center;
 }
 .team .container .box img{
-    width: 90%;
-    margin-bottom: 1rem;
+    width: 95%;
+    height: 95%;
 }
 .team .container .box h3{
-    font-size: 1.5rem;
-    font-family: sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 1%;
+    align-items: center;
 }
 .contact .container{
     display: grid;
+    margin-top: -3%;
     grid-template-columns: 1fr 3fr;
     gap:2rem;
-    margin-top: -3%;
  }
- .contact .container .image img{
+.contact .container .image img{
     width: 35rem;
     height: 30rem;   
- }
- .contact .container form{
+}
+.contact .container form{
     border:.2rem solid black;
     width: 70%;
     height: 70%;
     padding: 0.5rem;
     text-align: center;
-    margin-top: 12%;   
- }
+    margin-top: 10%;
+}
  .contact .container form h3{
     font-size: 2rem;
-    color:var(--black);
+    color:black;
 } 
 .contact .container form .box{
     width: 70%;
@@ -230,31 +245,288 @@ header .flex .navbar a:hover{
     border:.2rem solid black;
     margin:1rem 0;
 }
-footer .container{
+footer .box-container{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 2.5rem;  
+    gap: 5rem;  
     align-items: flex-start;
 }
-footer .container .box{
+footer .box-container .box{
     text-align: center;
 }
-footer .container .box i{ 
-    font-size: 1.5rem;
+footer .box-container .box i{ 
     line-height: 3rem;
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
     background-color: #be9c79;
     color: white;
+    font-size: x-large;
 }
-footer .container .box p{
+footer .box-container .box p{
     line-height: 2;
     font-size: 1.25rem;
     color: #666;
 }
-footer .container .box h3{
-    margin: .5rem 0;
+footer .box-container .box h3{
     font-size: large;
     color: black;
 }
+
+@media screen and (max-width:440px){
+    .flex {
+        width: 100%;
+        height: auto;
+}
+.flex ul {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+}  
+.flex ul a {
+    text-align: center;
+    width: 25%;
+    height: 70%;
+    background-color: #ede8e3;
+    margin-right: 0;
+}
+.menu-icon {
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: -10%;
+    line-height: 60px;
+}
+#menuToggle:checked ~ ul{
+    max-height: 350px;
+}
+.menu-icon i {
+    font-size: 1.7em;
+}
+.home-bg .home .content h3{
+     font-size: 25px;
+     margin-right: 40%;
+}
+.home-bg .home .content p{
+     margin-right: 40%;
+}
+.button{
+     margin-right: 55%;
+     font-size: 80%;
+}
+.about{
+     display: flex;
+     flex-direction: column;
+     height: auto;
+}
+.about .image img{
+   width: 20rem;
+}
+.about .content h3{
+    font-size: 17px;
+}
+.about .content p{
+     font-size: 10px;
+}
+.heading img{
+     width: 125px;
+}
+.heading h3{
+     font-size: 20px;
+}
+.facility .container{
+     display: flex;
+     flex-direction: column;
+}
+.facility{
+     height: auto;
+ }
+ .facility .container .box img{
+     width: 10rem;
+     margin-left: 16%;    
+ }
+ .facility .container .box h3{
+    font-size: 18px;
+    margin-left: 20%;
+ }
+ .facility .container .box p{
+     font-size: small;
+ }
+ .menu .container{
+     height: auto;
+     display: flex;
+     flex-direction: column;
+ }
+ .menu .container .box img{
+     width: 15rem;
+ }
+ .menu .container .box h3{
+     font-size: 18px;
+ }
+ .gallery .container{
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     text-align: center;
+ }
+ .team .container{
+     display: flex;
+     flex-direction: column;
+ }
+ .team .container .box img{
+     width: 17rem;
+}
+.contact .container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.contact .container .image img{
+    width: 20rem;   
+}
+.contact .container form{
+    margin-left: 15%;
+}
+.contact .container form .box{
+    width: 90%;  
+}
+.contact .container form h3{
+    font-size: 10px;
+}
+.contact .container form .button{
+    margin-left: 17%;
+}
+footer .box-container{
+    display: flex;
+    flex-direction: column;
+}
+footer .box-container .box{
+    margin-left: 15%;
+    width: 17rem;
+}  
+}
+
+@media screen and (max-width:900px){
+    .flex {
+        width: 100%;
+        height: auto;
+}
+.flex ul {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+}  
+.flex ul a {
+    text-align: center;
+    width: 25%;
+    height: 70%;
+    background-color: #ede8e3;
+    margin-right: 0;
+}
+.menu-icon {
+    width: 100px;
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: -5%;
+    line-height: 60px;
+}
+#menuToggle:checked ~ ul{
+    max-height: 350px;
+}
+.menu-icon i {
+    font-size: 1.7em;
+}
+.home-bg .home .content h3{
+     font-size: 25px;
+     margin-right: 40%;
+}
+.home-bg .home .content p{
+     margin-right: 40%;
+}
+.button{
+     margin-right: 55%;
+     font-size: 80%;
+}
+.about{
+     display: flex;
+     height: auto;
+}
+.about .image img{
+   width: 20rem;
+}
+.about .content h3{
+    font-size: 17px;
+}
+.about .content p{
+     font-size: 10px;
+}
+.heading img{
+     width: 125px;
+}
+.heading h3{
+     font-size: 20px;
+}
+.facility .container{
+     display: flex;
+}
+.facility{
+     height: auto;
+ }
+ .facility .container .box img{
+     width: 10rem;
+     margin-left: 16%;    
+ }
+ .facility .container .box h3{
+    font-size: 18px;
+    margin-left: 20%;
+ }
+ .facility .container .box p{
+     font-size: small;
+ }
+ .menu .container{
+     height: auto;
+ }
+ .menu .container .box img{
+     width: 15rem;
+ }
+ .menu .container .box h3{
+     font-size: 18px;
+ }
+ .gallery .container{
+     height: auto;
+     gap: .5rem;
+ }
+ .gallery .container img{
+     width: 17rem;
+     margin-left: 7%;
+ }
+ .team .container{
+     flex-direction: column;
+ }
+ .team .container .box img{
+     width: 17rem;
+}
+.contact .container{
+    height: auto;
+    display: flex;
+}
+.contact .container .image img{
+    width: 20rem;   
+    margin-top: -10%;
+}
+.contact .container form{
+    margin-left: 10%;
+}
+.contact .container form .box{
+    width: 90%;  
+}
+.contact .container form h3{
+    font-size: 10px;
+}
+.contact .container form .button{
+    margin-left: 17%;
+}
+}
+
